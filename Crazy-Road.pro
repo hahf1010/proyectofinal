@@ -55,11 +55,6 @@ FORMS    += \
     menu.ui \
     instrucciones.ui \
     licencia.ui \
-    mundo2.ui \
-    mapa.ui \
-    instrucciones.ui \
-    licencia.ui \
-    menu.ui \
     mundo2.ui
 
 RESOURCES += \

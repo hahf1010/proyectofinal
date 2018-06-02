@@ -7,8 +7,7 @@
 
 menu::menu(QWidget *parent) :
     QMainWindow(parent),
-    ui (new Ui::menu)
-
+    ui(new Ui::menu)
 {
     ui->setupUi(this);
     connect(ui->jugar,SIGNAL(clicked()),this,SLOT(jugar()));
