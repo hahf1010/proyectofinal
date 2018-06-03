@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/image">
+        <file>Amarillo.png</file>
+        <file>Azul.png</file>
+        <file>Carretera.png</file>
+        <file>carritos.png</file>
+        <file>carro.png</file>
+        <file>Enemigo.png</file>
+        <file>Rojo.png</file>
+        <file>imagenes/Camion.png</file>
+        <file>imagenes/Carretera.png</file>
+        <file>imagenes/mapa1.png</file>
+        <file>imagenes/menu.png</file>
+        <file>imagenes/Amarillo.png</file>
+        <file>imagenes/Azul.png</file>
+        <file>imagenes/Rojo.png</file>
+    </qresource>
+</RCC>

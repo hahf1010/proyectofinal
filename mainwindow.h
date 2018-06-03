@@ -34,7 +34,7 @@ protected:
 private slots:
     void actualizar();
     void on_iniciar_clicked();
-    void tiempo();
+    void tiempo();   
     void atras();
     void vidas();
     void mvto();

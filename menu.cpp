@@ -7,8 +7,7 @@
 
 menu::menu(QWidget *parent) :
     QMainWindow(parent),
-    ui (new Ui::menu)
-
+    ui(new Ui::menu)
 {
     ui->setupUi(this);
     connect(ui->jugar,SIGNAL(clicked()),this,SLOT(jugar()));
@@ -29,7 +28,7 @@ void menu::jugar()
     MainWindow *mapa=new MainWindow();
     mapa->show();
     close();
-
+    
 }
 
 void menu::instruccion()
@@ -37,7 +36,7 @@ void menu::instruccion()
     instrucciones *instruc=new instrucciones();
     instruc->show();
     close();
-
+    
 }
 
 
@@ -46,7 +45,7 @@ void menu::creditos()
     licencia *lic= new licencia();
     lic->show();
     close();
-
+    
 }
 
 

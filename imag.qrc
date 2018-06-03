@@ -1,17 +1,16 @@
 <RCC>
     <qresource prefix="/">
-        <file>imagenes/Accidente.png</file>
         <file>imagenes/camion.png</file>
-        <file>imagenes/Carretera.png</file>
         <file>imagenes/cAzul.png</file>
         <file>imagenes/cMorado.png</file>
         <file>imagenes/cRojo.png</file>
         <file>imagenes/mapa1.png</file>
-        <file>imagenes/menu.jpg</file>
         <file>imagenes/meta.jpg</file>
-        <file>imagenes/Musica.mp3</file>
-        <file>imagenes/nivel2.png</file>
         <file>imagenes/Super (1).png</file>
-        <file>imagenes/Thumbs.db</file>
+        <file>imagenes/Musica.mp3</file>
+        <file>imagenes/Accidente.png</file>
+        <file>imagenes/Carretera.png</file>
+        <file>imagenes/nivel2.png</file>
+        <file>imagenes/menu.jpg</file>
     </qresource>
 </RCC>
