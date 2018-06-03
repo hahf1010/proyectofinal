@@ -1,6 +1,6 @@
 #include "menu.h"
 #include "ui_menu.h"
-#include "mainwindow.h"
+#include "mundo1.h"
 #include "licencia.h"
 #include "instrucciones.h"
 #include "mundo2.h"

@@ -1,4 +1,4 @@
-#include "mainwindow.h"
+#include "mundo1.h"
 #include "ui_mapa.h"
 #include <QDebug>
 #include <QString>
@@ -49,13 +49,13 @@ MainWindow::MainWindow(QWidget *parent) :
 
     flag=0;
 
-    //-------------------------------------------------------------------//
-    //musica de fondo, AQUI ESCRIBIR LA RUTA DEL ARCHIVO DE MUSICA.
-    // Ruta Musica
 
-//    music= new QMediaPlayer();
-//    music->setMedia(QUrl("C:/Users/David Bedoya Llano/Desktop/Musica.mp3"));
-//    music->play();
+    //Musica de fondo.
+
+
+    //music= new QMediaPlayer();
+    //music->setMedia(QUrl("C:/Users/Harrison/Documents/GitHub/proyectofinal/imagenes/Musica.mp3"));
+    //music->play();
 }
 
 void MainWindow::mvto(){
@@ -84,7 +84,7 @@ void MainWindow::actualizar(){
     if(cont1==0){
         cont++;
         if(cont==250){
-        c2.append(new enemigos); //agregar enemigos
+        c2.append(new enemigos);    //Agregar enemigos
         scene->addItem(c2.last());
         cont=0;
     }
@@ -97,7 +97,9 @@ void MainWindow::actualizar(){
        c2.removeAt(0);
     }
     }
-    //colision
+
+
+    //Colision
     if(c1->collidesWithItem(c2.at(i))){
        choque=true;
 }
@@ -176,7 +178,7 @@ void MainWindow::keyPressEvent(QKeyEvent *e)
 void MainWindow::ManejoVida(){
     if (vida==0){
         timer->stop();
-        //music->stop();
+       // music->stop();
         ui->Boom->setPixmap(QPixmap(":/imagenes/Accidente.png"));
         this->setCentralWidget(ui->Boom);
         QMessageBox msgBox;
@@ -209,7 +211,7 @@ void MainWindow::ManejoVida(){
 void MainWindow::llegada()
 {
     cont2++;
-    if (cont2==7500){
+    if (cont2==4500){
 
         super= new superman;
         scene->addItem(super);
@@ -220,8 +222,8 @@ void MainWindow::llegada()
     }
     }
 
-    else if (cont2==9000){
-        //qDebug()<<"meta";
+    else if (cont2==5900){
+        qDebug()<<"meta";
         QMessageBox msgBox;
         msgBox.setText("GANASTE!!!");
         msgBox.exec();

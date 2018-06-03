@@ -15,7 +15,6 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
     carrito.cpp \
     enemigos.cpp \
     menu.cpp \
@@ -23,9 +22,10 @@ SOURCES += main.cpp\
     licencia.cpp \
     desplazamiento.cpp \
     superman.cpp \
-    mundo2.cpp
+    mundo2.cpp \
+    mundo1.cpp
 
-HEADERS  += mainwindow.h \
+HEADERS  += \
     carrito.h \
     enemigos.h \
     menu.h \
@@ -33,14 +33,15 @@ HEADERS  += mainwindow.h \
     licencia.h \
     desplazamiento.h \
     superman.h \
-    mundo2.h
+    mundo2.h \
+    mundo1.h
 
 FORMS    += \
-    mapa.ui \
     menu.ui \
     instrucciones.ui \
     licencia.ui \
-    mundo2.ui
+    mundo2.ui \
+    mundo1.ui
 
 RESOURCES += \
     imag.qrc

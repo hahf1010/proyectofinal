@@ -202,7 +202,7 @@ void mundo2::ManejoVida(){
 void mundo2::llegada()
 {
     cont2++;
-    if (cont2==7500){
+    if (cont2==4500){
 
         super= new superman;
         scene->addItem(super);
@@ -213,7 +213,7 @@ void mundo2::llegada()
     }
     }
 
-    else if (cont2==9000){
+    else if (cont2==5900){
         //qDebug()<<"meta";
         QMessageBox msgBox;
         msgBox.setText("GANASTE!!!");

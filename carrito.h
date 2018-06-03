@@ -5,7 +5,7 @@
 #include <QGraphicsPixmapItem>
 #include <QDebug>
 
-class carrito: public QGraphicsPixmapItem   //hereda de QGraphicsItem
+class carrito: public QGraphicsPixmapItem
 {
 
 public:

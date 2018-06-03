@@ -11,7 +11,7 @@
  {
      px+=mx;
      py=my;
-     if(px>-100 && px<80)//validacion Extremos carretera
+     if(px>-100 && px<80)              //Validacion Extremos carretera
      {
 
           setPos(px,125);
