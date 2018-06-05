@@ -12,7 +12,7 @@ class enemigos: public carrito
 public:
     enemigos();
     ~enemigos();
-    void aleatorio();                   //Cambia la posicion
+    void aleatorio();                   //Cambia la posicion donde apareceran aleatoriamente
 
 
 };

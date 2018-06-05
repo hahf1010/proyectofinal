@@ -13,7 +13,7 @@ desplazamiento::~desplazamiento(){
 void desplazamiento::lineas(){
 
     px=0;
-    py+=1;
+    py+=2;
     setPos(px,py);
 }
 
@@ -24,7 +24,7 @@ QRectF desplazamiento::boundingRect() const
 
 void desplazamiento::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
-    painter->setBrush(Qt::white);        //asigna el color
+    painter->setBrush(Qt::white);        //Asigna el color a las líneas de la carretera
     painter->drawRect(boundingRect());
 }
 
