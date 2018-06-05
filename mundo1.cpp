@@ -50,7 +50,7 @@ MainWindow::MainWindow(QWidget *parent) :
     flag=0;
 
 
-    //Musica de fondo.
+    //Musica de fondo para este nivel.
 
 
     //music= new QMediaPlayer();
