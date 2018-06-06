@@ -1,7 +1,7 @@
 #include "enemigos.h"
 
 enemigos::enemigos(){
-    vy=1;
+    vy=2;
     px=qrand()%150-100;
     py=-280;
     r=qrand()%3;

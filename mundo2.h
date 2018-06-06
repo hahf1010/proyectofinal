@@ -43,7 +43,7 @@ private:
     QTimer *timer, *Vidas;
     QGraphicsScene *scene;
     carrito *carro;
-    QList<enemigos*>E1,E2;
+    QList<enemigos*>E2;
     QList<desplazamiento*>d2;
     int cont4,cont3,cont2,cont1,cont,cent,seg,min;
     qreal px,py;

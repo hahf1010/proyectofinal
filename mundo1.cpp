@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     for(int i=0;i<15;i++){
         d1.append(new desplazamiento);
-          d1.last()->setposicion(0,-280+200*i);
+          d1.last()->setposicion(0,-280+150*i);
         scene->addItem(d1.at(i));
    }
 
@@ -50,12 +50,7 @@ MainWindow::MainWindow(QWidget *parent) :
     flag=0;
 
 
-    //Musica de fondo para este nivel.
 
-
-    //music= new QMediaPlayer();
-    //music->setMedia(QUrl("C:/Users/Harrison/Documents/GitHub/proyectofinal/imagenes/Musica.mp3"));
-    //music->play();
 }
 
 void MainWindow::mvto(){
@@ -83,7 +78,7 @@ void MainWindow::advance()
 void MainWindow::actualizar(){
     if(cont1==0){
         cont++;
-        if(cont==250){
+        if(cont==200){
         c2.append(new enemigos);    //Agregar enemigos
         scene->addItem(c2.last());
         cont=0;
@@ -168,11 +163,31 @@ void MainWindow::vidas()
 void MainWindow::keyPressEvent(QKeyEvent *e)
 {
     if(e->key() == Qt::Key_D){
-        c1->mover(5,125);
+        c1->mover(20,py);
   }
     if(e->key() == Qt::Key_A){
-        c1->mover(-5,215);
+        c1->mover(-20,py);
   }
+    if(e->key() == Qt::Key_W){
+        c1->mover(px,-20);
+  }
+    if(e->key() == Qt::Key_S){
+        c1->mover(px,20);
+  }
+    if(e->key() == Qt::Key_Q){
+        c1->mover(px-5,py-5);
+  }
+    if(e->key() == Qt::Key_E){
+        c1->mover(px+5,py-5);
+  }
+    if(e->key() == Qt::Key_Z){
+        c1->mover(px-5,py+5);
+  }
+    if(e->key() == Qt::Key_C){
+        c1->mover(px+5,py+5);
+  }
+
+
 
 }
 void MainWindow::ManejoVida(){

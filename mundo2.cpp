@@ -82,8 +82,8 @@ void mundo2::advance()
 void mundo2::actualizar(){
     if(cont1==0){
         cont++;
-        if(cont==120){
-        E2.append(new enemigos); //agregar enemigos
+        if(cont==70){
+        E2.append(new enemigos);       //Agregar enemigos
         scene->addItem(E2.last());
         cont=0;
     }
@@ -96,7 +96,8 @@ void mundo2::actualizar(){
        E2.removeAt(0);
     }
     }
-    //colision
+
+    //Colision
     if(carro->collidesWithItem(E2.at(i))){
                choque=true;
 }
