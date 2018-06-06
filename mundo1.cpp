@@ -21,17 +21,17 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // crear lineas limitadas para que el no pasen por el carro
 
-    for(int i=0;i<15;i++){
+    for(int i=0;i<15;i++){                        //Mover las lineas y desaparecer la inicial
         d1.append(new desplazamiento);
-          d1.last()->setposicion(0,-280+150*i);  //Mover las lineas y desaparecer la inicial
+          d1.last()->setposicion(0,-280+150*i);   //Frecuencia con las que salen las líneas
         scene->addItem(d1.at(i));
    }
 
     cont=cont1=cont2=cent=seg=min=0;
-    vida=3;
+    vida=5;
     vidas();
     ui->escena->setScene(scene);
-    scene->setSceneRect(-140, -140, 280, 280);
+    scene->setSceneRect(-140, -140, 280, 280);     //Posicion donde inician el carro y las lineas
 
     c1= new carrito;
     c1->setPos(-10,125);
@@ -53,7 +53,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 }
 
-void MainWindow::mvto(){
+void MainWindow::mvto(){              //Funcion para las lineas
 if(cont1==0){
     for(int i=0;i<15;i++){
         d1.at(i)->lineas();
@@ -67,7 +67,7 @@ else
     cont1--;
 
 }
-void MainWindow::advance()
+void MainWindow::advance()         //Funcion para el superman
 {
     if(px==-178 && py==200){
         super->advance(-3);
@@ -75,7 +75,7 @@ void MainWindow::advance()
     }
 }
 
-void MainWindow::actualizar(){
+void MainWindow::actualizar(){     //Funcion para los enemigos
     if(cont1==0){
         cont++;
         if(cont==200){              //Frecuencia con la que aparecen los enemigos
@@ -128,7 +128,7 @@ void MainWindow::on_iniciar_clicked()
     timer->start(10);
 }
 
-void MainWindow::tiempo()
+void MainWindow::tiempo()               //Funcion para el tiempo
 {
      QString t;
      cent++;
@@ -226,7 +226,7 @@ void MainWindow::ManejoVida(){
 void MainWindow::llegada()
 {
     cont2++;
-    if (cont2==4500){
+    if (cont2==1500){
 
         super= new superman;
         scene->addItem(super);

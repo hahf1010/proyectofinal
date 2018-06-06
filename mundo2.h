@@ -49,7 +49,7 @@ private:
     qreal px,py;
     char flag;
     superman *super;
-    int izqu,derec;
+    //int izqu,derec;
 };
 
 

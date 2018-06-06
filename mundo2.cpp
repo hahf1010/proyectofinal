@@ -21,9 +21,9 @@ mundo2::mundo2(QWidget *parent) :
 
     // crear lineas limitadas para que el no pasen por el carro
 
-    for(int i=0;i<15;i++){
+    for(int i=0;i<15;i++){                        //Mover las lineas y desaparecer la inicial
         d2.append(new desplazamiento);
-          d2.last()->setposicion(0,-280+150*i);  //Mover las lineas y desaparecer la inicial
+          d2.last()->setposicion(0,-280+150*i);   //Frecuencia con las que salen las líneas
         scene->addItem(d2.at(i));
    }
 
@@ -31,7 +31,7 @@ mundo2::mundo2(QWidget *parent) :
     vida=3;
     vidas();
     ui->mundo->setScene(scene);
-    scene->setSceneRect(-140, -140, 280, 280);
+    scene->setSceneRect(-140, -140, 280, 280);   //Posicion donde inician el carro y las lineas
 
     carro = new carrito;
     carro->setPos(-10,125);
@@ -57,7 +57,7 @@ mundo2::~mundo2()
 }
 
 
-void mundo2::mvto(){
+void mundo2::mvto(){                       //Funcion para las lineas
 if(cont1==0){
     for(int i=0;i<15;i++){
         d2.at(i)->lineas();
@@ -71,7 +71,7 @@ else
     cont1--;
 
 }
-void mundo2::advance()
+void mundo2::advance()                     //Funcion para el superman
 {
     if(px==-178 && py==200){
         super->advance(-3);
@@ -79,7 +79,7 @@ void mundo2::advance()
     }
 }
 
-void mundo2::actualizar(){
+void mundo2::actualizar(){                //Funcion para los enemigos
     if(cont1==0){
         cont++;
         if(cont==80){                  //Frecuencia con la que aparecen los enemigos
@@ -221,7 +221,7 @@ void mundo2::ManejoVida(){
 void mundo2::llegada()
 {
     cont2++;
-    if (cont2==4500){
+    if (cont2==1500){
 
         super= new superman;
         scene->addItem(super);
