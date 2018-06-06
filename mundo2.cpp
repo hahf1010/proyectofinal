@@ -23,7 +23,7 @@ mundo2::mundo2(QWidget *parent) :
 
     for(int i=0;i<15;i++){
         d2.append(new desplazamiento);
-          d2.last()->setposicion(0,-280+200*i);
+          d2.last()->setposicion(0,-280+150*i);  //Mover las lineas y desaparecer la inicial
         scene->addItem(d2.at(i));
    }
 
@@ -82,7 +82,7 @@ void mundo2::advance()
 void mundo2::actualizar(){
     if(cont1==0){
         cont++;
-        if(cont==70){
+        if(cont==80){                  //Frecuencia con la que aparecen los enemigos
         E2.append(new enemigos);       //Agregar enemigos
         scene->addItem(E2.last());
         cont=0;
@@ -160,10 +160,28 @@ void mundo2::vidas()
 void mundo2::keyPressEvent(QKeyEvent *e)
 {
     if(e->key() == Qt::Key_D){
-        carro->mover(5,125);
+        carro->mover(20,py);
   }
     if(e->key() == Qt::Key_A){
-        carro->mover(-5,215);
+        carro->mover(-20,py);
+  }
+    if(e->key() == Qt::Key_W){
+        carro->mover(px,-20);
+  }
+    if(e->key() == Qt::Key_S){
+        carro->mover(px,20);
+  }
+    if(e->key() == Qt::Key_Q){
+        carro->mover(px-5,py-5);
+  }
+    if(e->key() == Qt::Key_E){
+        carro->mover(px+5,py-5);
+  }
+    if(e->key() == Qt::Key_Z){
+        carro->mover(px-5,py+5);
+  }
+    if(e->key() == Qt::Key_C){
+        carro->mover(px+5,py+5);
   }
 
 }

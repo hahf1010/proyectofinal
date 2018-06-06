@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     for(int i=0;i<15;i++){
         d1.append(new desplazamiento);
-          d1.last()->setposicion(0,-280+150*i);
+          d1.last()->setposicion(0,-280+150*i);  //Mover las lineas y desaparecer la inicial
         scene->addItem(d1.at(i));
    }
 
@@ -78,7 +78,7 @@ void MainWindow::advance()
 void MainWindow::actualizar(){
     if(cont1==0){
         cont++;
-        if(cont==200){
+        if(cont==200){              //Frecuencia con la que aparecen los enemigos
         c2.append(new enemigos);    //Agregar enemigos
         scene->addItem(c2.last());
         cont=0;
