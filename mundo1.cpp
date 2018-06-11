@@ -29,6 +29,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     cont=cont1=cont2=cent=seg=min=0;
     vida=5;
+    puntos =0;
     vidas();
     ui->escena->setScene(scene);
     scene->setSceneRect(-140, -140, 280, 280);     //Posicion donde inician el carro y las lineas
@@ -82,6 +83,8 @@ void MainWindow::actualizar(){     //Funcion para los enemigos
         c2.append(new enemigos);    //Agregar enemigos
         scene->addItem(c2.last());
         cont=0;
+
+
     }
     for(int i=0;i<c2.size();i++){
         c2.at(i)->aleatorio();
@@ -97,17 +100,21 @@ void MainWindow::actualizar(){     //Funcion para los enemigos
     //Colision
     if(c1->collidesWithItem(c2.at(i))){
        choque=true;
+}   
 }
-}
+
     if (choque==true && flag==0){
-        c1->setPos(-10,125);
+        c1->setPixmap(QPixmap(":/imagenes/explo.png"));
+        timer->start();
         vida--;
         vidas();
         flag++;
         ManejoVida();
         cont1=200;
     }
-    else if(choque==false && flag==1){
+        else if(choque==false && flag>0){
+        c1->setPixmap(QPixmap(":/imagenes/cRojo.png"));
+
         flag--;
     }
     choque =false;
@@ -126,6 +133,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_iniciar_clicked()
 {
     timer->start(10);
+    puntos = puntos + 5;
 }
 
 void MainWindow::tiempo()               //Funcion para el tiempo

@@ -4,7 +4,7 @@ enemigos::enemigos(){
     vy=2;
     px=qrand()%150-100;
     py=-280;
-    r=qrand()%3;
+    r=qrand()%4;
 
     switch(r){
     case 0: setPixmap(QPixmap(":/imagenes/cAzul.png"));
@@ -12,6 +12,8 @@ enemigos::enemigos(){
     case 1: setPixmap(QPixmap(":/imagenes/cMorado.png"));
         break;
     case 2: setPixmap(QPixmap(":/imagenes/camion.png"));
+        break;
+    case 3: setPixmap(QPixmap(":/imagenes/mancha.png"));
         break;
     default: break;
     }

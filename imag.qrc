@@ -12,5 +12,8 @@
         <file>imagenes/Carretera.png</file>
         <file>imagenes/nivel2.png</file>
         <file>imagenes/menu.jpg</file>
+        <file>imagenes/mancha.png</file>
+        <file>imagenes/explo.gif</file>
+        <file>imagenes/explo.png</file>
     </qresource>
 </RCC>
