@@ -3,10 +3,10 @@
  carrito::carrito(){
      setPixmap(QPixmap(":/imagenes/cRojo.png"));
 
-     px=-50;
-     py=125;
-     vx=0;
-     vy=0;
+     px=-50;              //Posicion en x
+     py=125;              //Posicion en y
+     vx=0;                //Velocidad en x
+     vy=0;                //Velocidad en y
  }
 
  void carrito::mover(int mx, int my)

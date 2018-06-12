@@ -15,10 +15,10 @@ public:
     int getY();
 
 protected:
-    int px;
-    int py;
-    int vx;
-    int vy;
+    int px;          //Posicion en x
+    int py;          //Posicion en y
+    int vx;          //Velocidad en x
+    int vy;          //Velocidad en y
 
 
 

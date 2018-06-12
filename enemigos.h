@@ -8,7 +8,7 @@
 
 class enemigos: public carrito
 {
-    int r;
+    int r;                             //Variable tipo entero para se asignara el qrand en el .cpp
 public:
     enemigos();
     ~enemigos();

@@ -108,13 +108,13 @@ void MainWindow::actualizar(){     //Funcion para los enemigos
 
 
     //Colision Carro Principal
-    if(c1->collidesWithItem(c2.at(i))){                 // Condicion para la colision
+    if(c1->collidesWithItem(c2.at(i))){                   // Condicion para la colision
        choque=true;
 }   
 }
 
     if (choque==true && flag==0){
-        c1->setPixmap(QPixmap(":/imagenes/explo.png"));  //Cambio de imagen en la colision
+        c1->setPixmap(QPixmap(":/imagenes/explo.png"));    //Cambio de imagen en la colision
         timer->start();
         vida--;
         vidas();
@@ -123,7 +123,7 @@ void MainWindow::actualizar(){     //Funcion para los enemigos
         cont1=200;
     }
         else if(choque==false && flag>0){
-        c1->setPixmap(QPixmap(":/imagenes/cRojo.png"));
+        c1->setPixmap(QPixmap(":/imagenes/cRojo.png"));    //El carro vuelve a su imagen inicial luego de colisionar
 
         flag--;
     }
@@ -144,13 +144,13 @@ void MainWindow::actualizar(){     //Funcion para los enemigos
 //    }
 
 //    //Colision Carro 2
-//    if(c3->collidesWithItem(c2.at(j))){                 // Condicion para la colision
+//    if(c3->collidesWithItem(c2.at(j))){                 // Condicion para la colision del carro 2
 //       choque=true;
 //}
 //}
 
 //    if (choque==true && flag==0){
-//        c3->setPixmap(QPixmap(":/imagenes/explo.png"));  //Cambio de imagen en la colision
+//        c3->setPixmap(QPixmap(":/imagenes/explo.png"));   //Cambio de imagen en la colision
 //        timer->start();
 //        vida--;
 //        vidas();
@@ -202,7 +202,7 @@ void MainWindow::tiempo()                    //Funcion para el tiempo, centesima
 
 }
 
-void MainWindow::atras()
+void MainWindow::atras()                  //Funcion boton "atras"
 {
     timer->stop();
     close();
@@ -299,7 +299,7 @@ void MainWindow::llegada()
 
         super= new superman;
         scene->addItem(super);
-        super->setPos(-178,220);
+        super->setPos(-178,220);      //Posicion en la que aparece superman
         if(super->y()>280){
         scene->removeItem(super);
 

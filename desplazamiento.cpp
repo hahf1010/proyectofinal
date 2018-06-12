@@ -1,8 +1,8 @@
 #include "desplazamiento.h"
 
 desplazamiento::desplazamiento(){
-    px=10;
-    py=-100;
+    px=10;                          //Posicion de las lineas en x
+    py=-100;                        //Posicion de las lineas en y
 
 }
 

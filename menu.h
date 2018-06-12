@@ -20,7 +20,6 @@ private slots:
     void instruccion();
     void creditos();
     void on_nivel2_clicked();
-
     void on_jugar_clicked();
 
 private:
