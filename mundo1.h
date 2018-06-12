@@ -9,7 +9,6 @@
 #include "desplazamiento.h"
 #include <QGraphicsItem>
 #include "superman.h"
-//#include <QtMultimedia/QMediaPlayer>
 #include "carrito2.h"
 
 namespace Ui {
@@ -47,7 +46,7 @@ private:
     QTimer *timer, *Vidas;
     QGraphicsScene *scene;
     carrito *c1;
-    carrito2*c3;
+    carrito2 *c3;
     QList<enemigos*> c2;
     QList<desplazamiento*>d1;
     int cont4,cont3,cont2,cont1,cont,cent,seg,min;

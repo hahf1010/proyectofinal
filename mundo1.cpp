@@ -1,5 +1,5 @@
 #include "mundo1.h"
-#include "ui_mapa.h"
+#include "ui_mundo1.h"
 #include <QDebug>
 #include <QString>
 #include "menu.h"
@@ -128,42 +128,6 @@ void MainWindow::actualizar(){     //Funcion para los enemigos
         flag--;
     }
     choque =false;
-
-
-
-
-
-//    for(int j=0;i<c2.size();j++){
-//        c2.at(j)->aleatorio();
-
-//    if(c2.size()>0){
-//    if(c2.first()->y()>200){
-//       scene->removeItem(c2.first());
-//       c2.removeAt(0);
-//    }
-//    }
-
-//    //Colision Carro 2
-//    if(c3->collidesWithItem(c2.at(j))){                 // Condicion para la colision del carro 2
-//       choque=true;
-//}
-//}
-
-//    if (choque==true && flag==0){
-//        c3->setPixmap(QPixmap(":/imagenes/explo.png"));   //Cambio de imagen en la colision
-//        timer->start();
-//        vida--;
-//        vidas();
-//        flag++;
-//        ManejoVida();
-//        cont1=200;
-//    }
-//        else if(choque==false && flag>0){
-//        c1->setPixmap(QPixmap(":/imagenes/racing.png"));
-
-//        flag--;
-//    }
-//    choque =false;
 
 
 }

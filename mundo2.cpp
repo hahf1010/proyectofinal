@@ -34,10 +34,18 @@ mundo2::mundo2(QWidget *parent) :
     scene->setSceneRect(-140, -140, 280, 280);   //Posicion donde inician el carro y las lineas
 
     carro = new carrito;
-    carro->setPos(-10,125);
+    carro->setPos(-50,125);
     carro->setFlag(QGraphicsItem::ItemIsFocusable);
     carro->setFocus();
     scene->addItem(carro);
+
+
+    carroama= new carrito2;
+    carroama->setPos(40,125);
+    carroama->setFlag(QGraphicsItem::ItemIsFocusable);
+    carroama->setFocus();
+    scene->addItem(carroama);
+
 
     timer->stop();
     connect(timer,SIGNAL(timeout()),this,SLOT(mvto()));
@@ -185,6 +193,18 @@ void mundo2::keyPressEvent(QKeyEvent *e)      //Teclas con las que cambiaremos d
   }
     if(e->key() == Qt::Key_C){
         carro->mover(px+5,py+5);
+  }
+    if(e->key() == Qt::Key_L){        //Teclas con las que cambiaremos de posicion al carro principal
+        carroama->mover(20,py);
+  }
+    if(e->key() == Qt::Key_J){
+        carroama->mover(-20,py);
+  }
+    if(e->key() == Qt::Key_I){
+        carroama->mover(px,-20);
+  }
+    if(e->key() == Qt::Key_K){
+        carroama->mover(px,20);
   }
 
 }
