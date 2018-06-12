@@ -1,15 +1,15 @@
-#include "carrito.h"
+#include "carrito2.h"
 
- carrito::carrito(){
-     setPixmap(QPixmap(":/imagenes/cRojo.png"));
+carrito2::carrito2(){
+     setPixmap(QPixmap(":/imagenes/racing.png"));
 
-     px=-50;
+     px=40;
      py=125;
      vx=0;
      vy=0;
  }
 
- void carrito::mover(int mx, int my)
+ void carrito2::mover(int mx, int my)
  {
      px+=mx;
      py+=my;
@@ -25,15 +25,15 @@
      }
 }
 
- carrito::~carrito(){
+ carrito2::~carrito2(){
  }
 
- int carrito::getX()
+ int carrito2::getX()
  {
      return px;
  }
 
- int carrito::getY()
+ int carrito2::getY()
  {
      return py;
  }

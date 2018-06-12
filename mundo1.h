@@ -10,6 +10,7 @@
 #include <QGraphicsItem>
 #include "superman.h"
 //#include <QtMultimedia/QMediaPlayer>
+#include "carrito2.h"
 
 namespace Ui {
 class MainWindow;
@@ -31,6 +32,7 @@ public:
 protected:
     void keyPressEvent(QKeyEvent *e);
 
+
 private slots:
     void actualizar();
     void on_iniciar_clicked();
@@ -45,10 +47,11 @@ private:
     QTimer *timer, *Vidas;
     QGraphicsScene *scene;
     carrito *c1;
+    carrito2*c3;
     QList<enemigos*> c2;
     QList<desplazamiento*>d1;
     int cont4,cont3,cont2,cont1,cont,cent,seg,min;
-    int puntos,mayorpuntaje;
+    //int puntos,mayorpuntaje;
     qreal px,py;
     char flag;
     superman *super;

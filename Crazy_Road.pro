@@ -23,7 +23,8 @@ SOURCES += main.cpp\
     desplazamiento.cpp \
     superman.cpp \
     mundo2.cpp \
-    mundo1.cpp
+    mundo1.cpp \
+    carrito2.cpp
 
 HEADERS  += \
     carrito.h \
@@ -34,7 +35,8 @@ HEADERS  += \
     desplazamiento.h \
     superman.h \
     mundo2.h \
-    mundo1.h
+    mundo1.h \
+    carrito2.h
 
 FORMS    += \
     menu.ui \

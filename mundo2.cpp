@@ -57,7 +57,7 @@ mundo2::~mundo2()
 }
 
 
-void mundo2::mvto(){                       //Funcion para las lineas
+void mundo2::mvto(){                       //Funcion para las lineas de la carretera
 if(cont1==0){
     for(int i=0;i<15;i++){
         d2.at(i)->lineas();
@@ -98,19 +98,23 @@ void mundo2::actualizar(){                //Funcion para los enemigos
     }
 
     //Colision
-    if(carro->collidesWithItem(E2.at(i))){
-               choque=true;
+    if(carro->collidesWithItem(E2.at(i))){          // Condicion para la colision
+       choque=true;
 }
 }
-        if (choque==true && flag==0){
-        carro->setPos(-10,125);
+
+    if (choque==true && flag==0){
+        carro->setPixmap(QPixmap(":/imagenes/explo.png"));   //Cambio de imagen en la colision
+        timer->start();
         vida--;
         vidas();
         flag++;
         ManejoVida();
         cont1=200;
     }
-    else if(choque==false && flag==1){
+        else if(choque==false && flag>0){
+        carro->setPixmap(QPixmap(":/imagenes/cRojo.png"));
+
         flag--;
     }
     choque =false;
@@ -119,13 +123,12 @@ void mundo2::actualizar(){                //Funcion para los enemigos
 llegada();
 }
 
-
 void mundo2::on_iniciar_clicked()
 {
     timer->start(10);
 }
 
-void mundo2::tiempo()
+void mundo2::tiempo()             //Funcion para el tiempo, centesimas, segundos, minutos
 {
      QString t;
      cent++;
@@ -157,7 +160,7 @@ void mundo2::vidas()
 
 
 }
-void mundo2::keyPressEvent(QKeyEvent *e)
+void mundo2::keyPressEvent(QKeyEvent *e)      //Teclas con las que cambiaremos de posicion al carro principal
 {
     if(e->key() == Qt::Key_D){
         carro->mover(20,py);
@@ -221,7 +224,7 @@ void mundo2::ManejoVida(){
 void mundo2::llegada()
 {
     cont2++;
-    if (cont2==1500){
+    if (cont2==2500){             //Tiempo en el que aparece superman
 
         super= new superman;
         scene->addItem(super);
@@ -232,7 +235,7 @@ void mundo2::llegada()
     }
     }
 
-    else if (cont2==5900){
+    else if (cont2==5900){         //Tiempo que dura la parida para ganar
         //qDebug()<<"meta";
         QMessageBox msgBox;
         msgBox.setText("GANASTE!!!");

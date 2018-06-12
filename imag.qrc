@@ -13,7 +13,9 @@
         <file>imagenes/nivel2.png</file>
         <file>imagenes/menu.jpg</file>
         <file>imagenes/mancha.png</file>
-        <file>imagenes/explo.gif</file>
         <file>imagenes/explo.png</file>
+        <file>imagenes/Carro2.png</file>
+        <file>imagenes/racing.png</file>
+        <file>imagenes/explo.gif</file>
     </qresource>
 </RCC>
